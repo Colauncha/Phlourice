@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+    html {
+    scroll-behavior: smooth;
+    font-family: "Mulish", sans-serif;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #16a34a #f0fdf4; /* thumb track */
+  }
+}
+
+
+/* ===== Scrollbar Styles ===== */
+@layer utilities {
+  /* Custom scrollbar class */
+  .scrollbar-green {
+    overflow-y: overlay; /* Chrome */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #16a34a #f0fdf4; /* thumb track */
+  }
+
+  /* Webkit scrollbar */
+  .scrollbar-green::-webkit-scrollbar,
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  .scrollbar-green::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-track {
+    background: #f0fdf4; /* green-50 */
+    border-radius: 5px;
+  }
+
+  .scrollbar-green::-webkit-scrollbar-thumb,
+  ::-webkit-scrollbar-thumb {
+    background: #16a34a; /* green-600 */
+    border-radius: 5px;
+    border: 2px solid #f0fdf4; /* green-50 */
+  }
+
+  .scrollbar-green::-webkit-scrollbar-thumb:hover,
+  ::-webkit-scrollbar-thumb:hover {
+    background: #15803d; /* green-700 */
+  }
+}
+
+/* Dark mode scrollbar */
+@media (prefers-color-scheme: dark) {
+  .scrollbar-green::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-track {
+    background: #052e16; /* green-900 */
+  }
+  
+  .scrollbar-green::-webkit-scrollbar-thumb,
+  ::-webkit-scrollbar-thumb {
+    background: #166534; /* green-800 */
+    border-color: #052e16; /* green-900 */
+  }
+}
+
+/* Add to your global CSS */
+@keyframes soft-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.animate-soft-bounce { animation: soft-bounce 2s ease-in-out infinite; }
+
+@keyframes water-ripple {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+  100% { box-shadow: 0 0 0 12px rgba(34, 197, 94, 0); }
+}
+.water-ripple { animation: water-ripple 2s ease-out infinite; }
+
+/* Respect motion preferences */
+@media (prefers-reduced-motion) {
+  .animate-soft-bounce,
+  .water-ripple {
+    animation: none !important;
+  }
+}
+
+@keyframes waterRipple {
+  0% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(22, 163, 74, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+}
+
+.water-effect {
+  animation: waterRipple 2s infinite;
+}
+
+/* Soft bounce (more elegant than Tailwind's default) */
+@keyframes soft-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.animate-soft-bounce { animation: soft-bounce 2s ease-in-out infinite; }
+
+/* Water ripple effect */
+@keyframes water-ripple {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4), 0 0 0 0 rgba(34, 197, 94, 0.3); }
+  50% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0.2), 0 0 0 20px rgba(34, 197, 94, 0.1); }
+  100% { box-shadow: 0 0 0 20px rgba(34, 197, 94, 0), 0 0 0 30px rgba(34, 197, 94, 0); }
+}
+.water-ripple { animation: water-ripple 3s ease-out infinite; }
+
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+
+@media (max-width: 768px) {
+  .water-ripple { animation-duration: 4s; }
+  .animate-soft-bounce { animation-duration: 3s; }
+}
+
+.swiper-container {
+  overflow: visible !important;
+}
+
+.swiper-slide {
+  transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1) !important;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Hide default cursor */
+html, body, a, button {
+  cursor: none !important;
+}
+
+/* For elements where you want the default cursor */
+.cursor-default {
+  cursor: default !important;
+}
