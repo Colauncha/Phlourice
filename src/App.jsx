@@ -4,7 +4,7 @@ import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } 
 import Home from './pages/Home'
 import Project from './pages/Project'
 import About from './pages/About'
-import Services from './pages/services'
+import Services from './pages/Services'
 import RootLayout from './layout/RootLayout'
 import NotFound from './components/NotFound'
 
