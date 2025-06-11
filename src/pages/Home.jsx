@@ -180,7 +180,7 @@ const Home = () => {
 
     <div className="max-w-8xl mx-auto mb-30 px-4 sm:px-8 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
-        {/* Image Column - Comes first on mobile */}
+        
         <motion.div
           className="col-span-1 relative md:order-2"
           initial={{ opacity: 0, y: 50 }}
@@ -195,7 +195,7 @@ const Home = () => {
           />
         </motion.div>
 
-        {/* Text Content Column - Comes second on mobile */}
+       
         <motion.div
           className="flex flex-col justify-center md:order-1"
           initial={{ opacity: 0, x: -20 }}

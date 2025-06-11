@@ -9,8 +9,10 @@ const Footer = () => {
       { name: "Home", href: "/" },
       { name: "About Us", href: "/about" },
       { name: "Services", href: "/services" },
-      { name: "Projects", href: "/projects" } // Changed from "/project" to "/projects" for consistency
+      { name: "Projects", href: "/project" } 
     ],
+
+
     contact: [
       { 
         icon: <FiMapPin className="text-green-300" />, 
