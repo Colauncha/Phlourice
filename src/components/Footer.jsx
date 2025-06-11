@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from 'framer-motion';
 import { FiMapPin, FiPhone, FiMail, FiClock } from 'react-icons/fi';
+import { Link } from 'react-router-dom'; // Added this import
 
 const Footer = () => {
   const footerItems = {
@@ -8,7 +9,7 @@ const Footer = () => {
       { name: "Home", href: "/" },
       { name: "About Us", href: "/about" },
       { name: "Services", href: "/services" },
-      { name: "Projects", href: "/project" }
+      { name: "Projects", href: "/projects" } // Changed from "/project" to "/projects" for consistency
     ],
     contact: [
       { 
@@ -52,7 +53,7 @@ const Footer = () => {
     }
   };
 
-  return (
+     return (
     <motion.footer
       initial="hidden"
       whileInView="visible"
@@ -72,18 +73,21 @@ const Footer = () => {
             </motion.h2>
             <div className="flex flex-col gap-6 mt-6">
               {footerItems.menu.map((item, index) => (
-                <motion.a
+                <motion.div
                   key={index}
-                  href={item.href}
-                  className="text-lg font-bold hover:text-green-300 transition-colors"
                   variants={itemVariants}
                   whileHover={{ 
                     x: 5,
                     color: '#86efac'
                   }}
                 >
-                  {item.name}
-                </motion.a>
+                  <Link
+                    to={item.href}
+                    className="text-lg font-bold hover:text-green-300 transition-colors block"
+                  >
+                    {item.name}
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </motion.div>

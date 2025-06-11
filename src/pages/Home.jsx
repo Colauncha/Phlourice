@@ -28,10 +28,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import { motion } from 'framer-motion';
+import { useNavigate } from "react-router-dom";
 
 
 
 const Home = () => {
+
+  const navigate = useNavigate();
 
 
   const projects = [
@@ -86,7 +89,7 @@ const Home = () => {
         <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 py-6 px-4 sm:px-6 lg:px-8">
 
     
-    <div className="max-w-8xl mx-auto mb-30 px-4 sm:px-8 lg:px-8">
+    {/* <div className="max-w-8xl mx-auto mb-30 px-4 sm:px-8 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
         
       
@@ -140,13 +143,18 @@ const Home = () => {
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
           >
        
-            <motion.button
-              whileHover={{ scale: 1.05 }}
+            
+
+             <motion.button
+             whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-green-600 hover:bg-green-700 text-white py-4 px-6 rounded-2xl text-3xl font-semibold transition duration-300 ease-in-out transform w-fit mt-10"
+                    onClick={() => {
+                      navigate("/about");
+                    }}
+                    className="bg-green-600 hover:bg-green-700 text-white py-4 px-6 rounded-2xl text-3xl font-semibold transition duration-300 ease-in-out transform w-fit mt-10"
             >
-              About Phlouriche
-            </motion.button>
+                    About Phlouriche
+                  </motion.button>
 
          
           </motion.div>
@@ -164,6 +172,88 @@ const Home = () => {
             alt="Background"
             className="w-full h-auto object-cover rounded-xl"
           />
+        </motion.div>
+      </div>
+    </div> */}
+
+
+
+    <div className="max-w-8xl mx-auto mb-30 px-4 sm:px-8 lg:px-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+        {/* Image Column - Comes first on mobile */}
+        <motion.div
+          className="col-span-1 relative md:order-2"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        >
+          <img
+            src={heroimg}
+            alt="Phlouriche Energy Solutions"
+            className="w-full h-auto object-cover "
+            loading="eager"
+          />
+        </motion.div>
+
+        {/* Text Content Column - Comes second on mobile */}
+        <motion.div
+          className="flex flex-col justify-center md:order-1"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.h1
+            className="text-4xl md:text-5xl font-bold text-gray-900 py-5 leading-tight"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            <span className="text-green-600">Transforming</span> Energy{" "}
+            <span className="text-green-600">Solutions</span> Into Reality
+          </motion.h1>
+
+          <motion.p
+            className="text-lg text-gray-700 leading-relaxed"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
+          >
+            <span className="text-green-600">Phlouriche</span> Nigeria Limited stands at the core of engineering, procurement and construction excellence.
+          </motion.p>
+
+          <motion.p
+            className="text-lg text-gray-700 leading-relaxed mt-4 mb-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }}
+          >
+            <span className="text-green-600">Specializing</span> in the design, operation, and maintenance of Natural Gas facilities, including Pipeline, CNG, LNG, gas processing plants, compression stations, above ground installation, pipeline construction, transmission and distribution network as well as CNG and LNG plants/stations as well as Independent Power Plants.
+          </motion.p>
+
+          <motion.p
+            className="text-lg text-gray-700 leading-relaxed"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut", delay: 0.5 }}
+          >
+            <span className="text-green-600">We</span> deliver tailored technical solutions that enhance efficiency and sustainability.
+          </motion.p>
+
+          <motion.div
+            className="flex flex-col md:flex-row justify-between items-start md:items-start mt-8 gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+          >
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => navigate("/about")}
+              className="bg-green-600 hover:bg-green-700 text-white py-4 px-6 rounded-2xl text-xl md:text-2xl font-semibold transition duration-300 ease-in-out transform w-fit mt-4 md:mt-10"
+            >
+              About Phlouriche
+            </motion.button>
+          </motion.div>
         </motion.div>
       </div>
     </div>
