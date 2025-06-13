@@ -436,6 +436,7 @@ const Home = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => navigate("/about")}
                 className="
           bg-green-600 
           text-white 
@@ -666,7 +667,10 @@ const Home = () => {
                         delay: 0.8,
                       }}
                     >
-                      <button
+                      <motion.button
+                       whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                      onClick={() => navigate("/services")}
                         className="
                 w-full sm:w-auto
                 bg-green-600 
@@ -685,7 +689,7 @@ const Home = () => {
               "
                       >
                         Explore →
-                      </button>
+                      </motion.button>
                     </motion.div>
                   </div>
                 </div>

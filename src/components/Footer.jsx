@@ -61,7 +61,7 @@ const Footer = () => {
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
       variants={containerVariants}
-      className="w-full bg-green-700 text-white py-20 px-6 sm:px-12"
+      className="w-full [&::selection]:bg-green-600 [&::selection]:text-white bg-green-700 text-white py-20 px-6 sm:px-12"
     >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_1fr_2fr] gap-y-12 gap-x-10">

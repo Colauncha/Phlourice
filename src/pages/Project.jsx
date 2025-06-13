@@ -281,7 +281,7 @@ const Project = () => {
     transition={{ duration: 1 }}
     className="project-card"
   >
-    <div className="bg-emerald-100">
+    <div className="bg-emerald-100 [&::selection]:bg-green-600 [&::selection]:text-white">
         <div className="relative flex items-center justify-center mt-22 w-full h-[200px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px]">
     
         <img 

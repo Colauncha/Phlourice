@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Contact = () => {
   return (
     <motion.div
-      className="w-full flex flex-col sm:flex-row items-center gap-8 sm:gap-52 bg-gray-50 px-20 sm:px-10 py-8"
+className="w-full [&::selection]:bg-green-600 [&::selection]:text-white flex flex-col sm:flex-row items-center gap-8 sm:gap-52 bg-gray-50 pl-20 sm:pl-20 pr-20 sm:pr-10 py-8"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
