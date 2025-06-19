@@ -137,6 +137,8 @@ const About = () => {
         </div>
       </motion.main>
 
+      
+
       {/* Mission/Vision Banner */}
       <div className="mt-12 md:mt-30 overflow-hidden"> 
         <motion.div

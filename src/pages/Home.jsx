@@ -334,7 +334,7 @@ const Home = () => {
                     </h2>
                   </div>
 
-                  <div className="text-6xl md:text-5xl leading-tight space-y-1 mb-4">
+                  <div className="text-5xl xs:text-3xl sm:text-3xl md:text-5xl leading-tight space-y-1 mb-4">
                     <p>
                       <span className="text-green-700">Discover</span>{" "}
                       Everything
@@ -407,21 +407,20 @@ const Home = () => {
                       alt="Services"
                       className="w-full h-full object-cover rounded-2xl"
                     />
-                    <div className="absolute inset-0 p-6.5 bg-black/30 rounded-2xl flex flex-col justify-between">
-                      <h3 className="w-fit text-white font-bold text-xl md:text-lg border-2 border-white rounded-2xl px-4 py-2">
-                        Power Plant Development
-                      </h3>
+                   <div className="absolute inset-0 p-4 sm:p-6 bg-black/30 rounded-2xl flex flex-col justify-between gap-4 overflow-hidden">
+  <h3 className="w-fit text-white font-bold text-base sm:text-lg border-2 border-white rounded-2xl px-3 py-1 sm:px-4 sm:py-2">
+    Power Plant Development
+  </h3>
 
-                      <div className="text-white/90 text-[16px] rounded-2xl p-6.5 bg-white/25">
-                        <p className="text-white/90 text-[20px] font-xl font-bold">
-                          Independent Power Plant
-                        </p>
-                        <p>
-                          Delivering reliable energy solutions through advanced
-                          design and maintenance.
-                        </p>
-                      </div>
-                    </div>
+  <div className="text-white/90 text-sm sm:text-base rounded-2xl p-4 sm:p-6 bg-white/25">
+    <p className="text-white/90 text-lg sm:text-xl font-bold mb-2">
+      Independent Power Plant
+    </p>
+    <p className="text-sm sm:text-base">
+      Delivering reliable energy solutions through advanced design and maintenance.
+    </p>
+  </div>
+</div>
                   </div>
 
                   <div className="mb-12">

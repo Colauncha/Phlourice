@@ -408,14 +408,13 @@ const Project = () => {
           text-white rounded-full shadow-xl
           transition-all duration-300 transform
           ${isVisible ? 
-            "opacity-100 scale-100 animate-soft-bounce water-ripple" : 
+            "opacity-100 scale-100 animate-soft-bounce" : 
             "opacity-0 scale-50 pointer-events-none"
           }
           hover:from-green-600 hover:to-green-700
           hover:shadow-2xl
         `}
         aria-label="Back to top"
-        style={{ willChange: 'transform, opacity' }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
