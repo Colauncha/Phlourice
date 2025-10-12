@@ -1,110 +1,6 @@
 
 
 
-// import contactImg from "../assets/contact image s/one contact.png";
-// import { motion } from 'framer-motion';
-// import { useState, useEffect } from "react";
-
-
-
-
-
-// const Contact = () => {
-//     const [isVisible, setIsVisible] = useState(false);
-
-//     useEffect(() => {
-//       const toggleVisibility = () => {
-//         setIsVisible(window.scrollY > 300);
-//       };
-//       window.addEventListener('scroll', toggleVisibility);
-//       return () => window.removeEventListener('scroll', toggleVisibility);
-//     }, []);
-    
-//     const scrollToTop = () => {
-//       window.scrollTo({
-//         top: 0,
-//         behavior: "smooth",
-//       });
-//     };
-
-
-
-
-
-//   return (
-//      <motion.div
-//     initial={{ opacity: 0, y: 20 }}
-//     whileInView={{ opacity: 1, y: 0 }}
-//     viewport={{ once: true, margin: "-100px" }}
-//     transition={{ duration: 1 }}
-//     className="project-card"
-//   >
-  
-//          <div className="bg-emerald-100 [&::selection]:bg-green-600 [&::selection]:text-white">
-//                 <div className="relative flex items-center justify-center mt-22 w-full h-[200px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px]">
-            
-//                 <img 
-//                   src={contactImg} 
-//                   alt="Our Products" 
-//                   className="w-full h-full object-cover"
-//                   loading="lazy"
-//                   decoding="async"
-//                 />
-                
-              
-//                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30"></div>
-                
-             
-//                 <div className="absolute w-full px-4 text-center">
-//                   <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold text-white drop-shadow-lg z-10">
-//                     Contact Us
-//                   </h2>
-//                 </div>
-//               </div>
-
-
-
-
-
-//         {/* Scroll to Top Button */}
-//       <button
-//         onClick={scrollToTop}
-//         className={`
-//           fixed bottom-8 right-8 z-50 p-3
-//           bg-gradient-to-br from-green-500 to-green-600
-//           text-white rounded-full shadow-xl
-//           transition-all duration-300 transform
-//           ${isVisible ? 
-//             "opacity-100 scale-100 animate-soft-bounce" : 
-//             "opacity-0 scale-50 pointer-events-none"
-//           }
-//           hover:from-green-600 hover:to-green-700
-//           hover:shadow-2xl
-//         `}
-//         aria-label="Back to top"
-//       >
-//         <svg
-//           xmlns="http://www.w3.org/2000/svg"
-//           className="h-6 w-6"
-//           fill="none"
-//           viewBox="0 0 24 24"
-//           stroke="currentColor"
-//           strokeWidth={2}
-//         >
-//           <path strokeLinecap="round" strokeLinejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-//         </svg>
-//       </button>
-//         </div>
-//     </motion.div>
-//   );
-// };
-
-
-
-// export default Contact;
-
-
-
 import contactImg from "../assets/contact image s/one contact.png";
 import { motion } from 'framer-motion';
 import { useState, useEffect } from "react";
@@ -144,13 +40,13 @@ const Project = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        // Simple validation
+  
         if (!formData.fullName || !formData.email || !formData.phone) {
             alert('Please fill in all required fields');
             return;
         }
         
-        // In a real application, you would send this data to a server
+   
         alert('Thank you for your message! We will get back to you soon.');
         
         // Reset form
@@ -318,7 +214,7 @@ const Project = () => {
                                         />
                                     </div>
 
-                                    {/* Message */}
+                                   
                                     <div>
                                         
                                         <textarea
@@ -332,7 +228,7 @@ const Project = () => {
                                         ></textarea>
                                     </div>
 
-                                    {/* Submit Button (reduced width) */}
+                                    
         <div className="flex justify-center">
           <button
             type="submit"

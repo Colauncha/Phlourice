@@ -43,26 +43,26 @@ const Home = () => {
   const navigate = useNavigate();
 
   const heroSlides = [
-    { 
-      img: heroimgone, 
+    {
+      img: heroimgone,
       title: "Transforming Energy Solutions",
       subtitle: "Into Reality",
       description: "From pipelines to power plants, we create sustainable energy solutions that work for today and the future."
     },
-    { 
-      img: hero2mgone, 
+    {
+      img: hero2mgone,
       title: "Transforming Energy Solutions",
-      subtitle: "Into Reality", 
+      subtitle: "Into Reality",
       description: "From pipelines to power plants, we create sustainable energy solutions that work for today and the future."
     },
-    { 
-      img: hero3mgone, 
+    {
+      img: hero3mgone,
       title: "Transforming Energy Solutions",
-      subtitle: "Into Reality", 
+      subtitle: "Into Reality",
       description: "From pipelines to power plants, we create sustainable energy solutions that work for today and the future."
     },
-    { 
-      img: hero4mgone, 
+    {
+      img: hero4mgone,
       title: "Transforming Energy Solutions",
       subtitle: "Into Reality",
       description: "From pipelines to power plants, we create sustainable energy solutions that work for today and the future."
@@ -104,99 +104,78 @@ const Home = () => {
 
   return (
     <>
-    <section className="relative min-h-screen">
-      
-        {/* <Swiper
-          modules={[Autoplay, EffectFade]}
-          effect="fade"
-          speed={1500}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          loop={true}
-          className="absolute inset-0 w-full h-full"
-        >
-          {heroSlides.map((slide, index) => (
-            <SwiperSlide key={index}>
-              <div 
-                className="w-full h-screen bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url(${slide.img})` }}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper> */}
+      <section className="relative min-h-screen">
 
-        <section className="relative w-full h-screen m-0 p-0 overflow-hidden">
-  {/* Swiper Background */}
-  <Swiper
-    modules={[Autoplay, EffectFade]}
-    effect="fade"
-    speed={1500}
-    autoplay={{
-      delay: 5000,
-      disableOnInteraction: false,
-    }}
-    loop={true}
-    className="absolute inset-0 w-full h-full"
-  >
-    {heroSlides.map((slide, index) => (
-      <SwiperSlide key={index}>
-        <div
-          className="w-full h-full bg-center bg-cover"
-          style={{
-            backgroundImage: `url(${slide.img})`,
-          }}
-        />
-      </SwiperSlide>
-    ))}
-  </Swiper>
+              <section className="relative w-full h-screen m-0 p-0 overflow-hidden">
+          {/* Swiper Background */}
+          <Swiper
+            modules={[Autoplay, EffectFade]}
+            effect="fade"
+            speed={1500}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            className="absolute inset-0 w-full h-full"
+          >
+            {heroSlides.map((slide, index) => (
+              <SwiperSlide key={index}>
+                <div
+                  className="w-full h-full bg-center bg-cover"
+                  style={{
+                    backgroundImage: `url(${slide.img})`,
+                  }}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-  {/* Content Overlay */}
-  <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4 bg-black/40">
-    <motion.h1
-      className="text-white text-4xl sm:text-3xl md:text-5xl font-bold leading-tight mt-22 mb-4"
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 0.3 }}
-    >
-      Transforming 
-      <span className="text-green-400"> Energy Solutions</span>
-    </motion.h1>
+          {/* Content Overlay */}
+          <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4 bg-black/40">
+            <motion.h1
+              className="text-white text-4xl sm:text-3xl md:text-5xl font-bold leading-tight mt-22 mb-4"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.3 }}
+            >
+              Transforming
+              <span className="text-green-400"> Energy Solutions</span>
+            </motion.h1>
 
-    <motion.h2
-      className="text-white text-3xl sm:text-4xl md:text-5xl font-semibold mb-6"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 0.6 }}
-    >
-      Into Reality
-    </motion.h2>
+            <motion.h2
+              className="text-white text-3xl sm:text-4xl md:text-5xl font-semibold mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.6 }}
+            >
+              Into Reality
+            </motion.h2>
 
-    <motion.p
-  className="text-white text-base sm:text-lg md:text-xl max-w-3xl mb-8 leading-relaxed"
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1, delay: 0.9 }}
->
-  From pipelines to power plants, we create sustainable energy solutions that work for today and the future.
-</motion.p>
+            <motion.p
+              className="text-white text-base sm:text-lg md:text-xl max-w-3xl mb-8 leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.9 }}
+            >
+              From pipelines to power plants, we create sustainable energy solutions that work for today and the future.
+            </motion.p>
 
 
-  
-    <motion.button
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      onClick={() => navigate("/about")}
-      className="bg-green-600 hover:bg-green-700 text-white py-3 px-3 rounded-lg text-lg sm:text-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 1.2 }}
-    >
-      Discover More
-    </motion.button>
-  </div>
-</section>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => navigate("/about")}
+              className="bg-green-600 hover:bg-green-700 text-white py-3 px-3 rounded-lg text-lg sm:text-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 1.2 }}
+            >
+              Discover More
+            </motion.button>
+          </div>
+        </section>
       </section>
 
       <motion.section
@@ -208,7 +187,7 @@ const Home = () => {
       >
         <main className="pt-[70px] px-[4%] [&::selection]:bg-green-600 [&::selection]:text-white mt-5 bg-gradient-to-br from-green-50 to-emerald-100 flex-1 scrollbar-green min-h-screen">
           <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 py-6 px-4 sm:px-6 lg:px-8">
-            
+
             {/* Marquee Section */}
             <div className="mb-30 overflow-hidden w-full">
               <Marquee autoFill pauseOnHover speed={30} className="w-full">
@@ -363,20 +342,20 @@ const Home = () => {
                       alt="Services"
                       className="w-full h-full object-cover rounded-2xl"
                     />
-                   <div className="absolute inset-0 p-4 sm:p-6 bg-black/30 rounded-2xl flex flex-col justify-between gap-4 overflow-hidden">
-  <h3 className="w-[60%] text-white font-bold text-base sm:text-lg border-2 border-white rounded-2xl px-3 py-1 sm:px-4 sm:py-2">
-    Power Plant Development
-  </h3>
+                    <div className="absolute inset-0 p-4 sm:p-6 bg-black/30 rounded-2xl flex flex-col justify-between gap-4 overflow-hidden">
+                      <h3 className="w-[60%] text-white font-bold text-base sm:text-lg border-2 border-white rounded-2xl px-3 py-1 sm:px-4 sm:py-2">
+                        Power Plant Development
+                      </h3>
 
-  <div className="text-white/90 text-sm sm:text-base rounded-2xl p-4 sm:p-6 bg-white/25">
-    <p className="text-white/90 text-lg sm:text-xl font-bold mb-2">
-      Independent Power Plant
-    </p>
-    <p className="text-sm sm:text-base">
-      Delivering reliable energy solutions through advanced design and maintenance.
-    </p>
-  </div>
-</div>
+                      <div className="text-white/90 text-sm sm:text-base rounded-2xl p-4 sm:p-6 bg-white/25">
+                        <p className="text-white/90 text-lg sm:text-xl font-bold mb-2">
+                          Independent Power Plant
+                        </p>
+                        <p className="text-sm sm:text-base">
+                          Delivering reliable energy solutions through advanced design and maintenance.
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
                   <div className="mb-12">
@@ -419,131 +398,63 @@ const Home = () => {
 
             {/* Request Consultation Section */}
 
-            {/* <div className="max-w-8xl mx-auto mt-5 mb-30 px-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2.5fr_0.8fr_0.8fr] gap-x-6 gap-y-10 items-stretch">
-                <motion.div
-                  className="bg-gray-100 py-8 px-6.5 rounded-lg h-full"
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                >
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-                    <div className="order-2 md:order-1">
-                      <img
-                        src={hero5img}
-                        alt="Engineering expertise"
-                        className="w-full h-auto"
-                      />
-                    </div>
+           
 
-                    <div className="order-1 md:order-2 space-y-6">
-                      <h3 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
-                        Elevate Your Projects With Our Expertise
-                      </h3>
-                      <p className="text-lg text-gray-600 leading-relaxed">
-                        Our extensive experience in pipeline construction
-                        ensures that every project is executed with precision,
-                        delivering high-quality solutions tailored to your
-                        needs.
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
+            <div className="max-w-8xl mx-auto mt-5 mb-30 px-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                {/* Item 1 */}
+
 
                 <motion.div
-                  className="flex flex-col h-full justify-end gap-6"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-                >
-                  <div>
-                    <h4 className="text-2xl md:text-3xl font-bold text-gray-800 leading-tight">
-                      Transform Your Energy Projects with Phlouriche Nigeria
-                      Limited.
-                    </h4>
-                  </div>
-                  <div>
-                    <img
-                      src={hero6img}
-                      alt="Energy project transformation"
-                      className="w-60 h-50 object-contain"
-                    />
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  className="flex flex-col justify-end items-start"
+                  className="rounded-lg p-6 flex flex-col items-center text-center bg-gray-100 hover:bg-white transition"
                   initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
                 >
-                  <p className="text-lg text-gray-600">
-                    We provide customized solutions for energy initiatives,
-                    ensuring quality equipment and expert maintenance to enhance
-                    your operational success.
+                  <div className="overflow-hidden rounded-lg mb-4 w-full">
+                    <img
+                      src={hero5img}
+                      alt="Energy project transformation"
+                      className="w-full h-auto object-cover transform transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <h4 className="text-3xl font-bold text-gray-800 mb-2">
+                    Elevate Your Projects With Our Expertise
+                  </h4>
+                  <p className="text-xl text-gray-600 leading-relaxed">
+                    Our extensive experience in pipeline construction ensures that every project is executed with precision, delivering high-quality solutions tailored to your needs.
                   </p>
                 </motion.div>
+
+                {/* item 2 */}
+                <motion.div
+                  className="rounded-lg p-6 flex flex-col items-center text-center bg-gray-100 hover:bg-white transition"
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                >
+                  <div className="overflow-hidden rounded-sm mb-4 w-full">
+                    <img
+                      src={hero6img}
+                      alt="Energy project transformation"
+                      className="w-full h-auto object-cover transform transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <h4 className="text-3xl font-bold text-gray-800 mb-2">
+                    Transform Your Energy Projects
+                  </h4>
+                  <p className="text-xl text-gray-600 leading-relaxed">
+                    We provide customized solutions for energy initiatives, ensuring quality equipment and expert maintenance to enhance your operational success.
+                  </p>
+                </motion.div>
+
+
+
+
               </div>
-            </div> */}
-
-            <div className="max-w-8xl mx-auto mt-5 mb-30 px-4">
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-    {/* Item 1 */}
-   
-   
-    <motion.div
-      className="rounded-lg p-6 flex flex-col items-center text-center bg-gray-100 hover:bg-white transition"
-      initial={{ opacity: 0, x: 50 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-    >
-      <div className="overflow-hidden rounded-lg mb-4 w-full">
-        <img
-          src={hero5img}
-          alt="Energy project transformation"
-          className="w-full h-auto object-cover transform transition-transform duration-500 hover:scale-105"
-        />
-      </div>
-      <h4 className="text-3xl font-bold text-gray-800 mb-2">
-          Elevate Your Projects With Our Expertise 
-      </h4>
-      <p className="text-xl text-gray-600 leading-relaxed">
-       Our extensive experience in pipeline construction ensures that every project is executed with precision, delivering high-quality solutions tailored to your needs.
-      </p>
-    </motion.div>
-
-    {/* item 2 */}
-    <motion.div
-      className="rounded-lg p-6 flex flex-col items-center text-center bg-gray-100 hover:bg-white transition"
-      initial={{ opacity: 0, x: 50 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-    >
-      <div className="overflow-hidden rounded-sm mb-4 w-full">
-        <img
-          src={hero6img}
-          alt="Energy project transformation"
-          className="w-full h-auto object-cover transform transition-transform duration-500 hover:scale-105"
-        />
-      </div>
-      <h4 className="text-3xl font-bold text-gray-800 mb-2">
-         Transform Your Energy Projects 
-      </h4>
-      <p className="text-xl text-gray-600 leading-relaxed">
-       We provide customized solutions for energy initiatives, ensuring quality equipment and expert maintenance to enhance your operational success.
-      </p>
-    </motion.div>
-
-    
-
-    
-  </div>
-</div>
+            </div>
 
 
 
@@ -678,29 +589,7 @@ const Home = () => {
                         delay: 0.8,
                       }}
                     >
-                      {/* <motion.button
-                       whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                      onClick={() => navigate("/services")}
-                        className="
-                w-full sm:w-auto
-                bg-green-600 
-                text-white 
-                py-3 sm:py-4 px-8 sm:px-12 
-                rounded-2xl 
-                text-xl sm:text-2xl 
-                font-semibold 
-                shadow-md 
-                hover:shadow-lg
-                hover:bg-green-700
-                transition-all 
-                duration-300
-                transform
-                hover:-translate-y-1
-              "
-                      >
-                        Explore →
-                      </motion.button> */}
+                      
                     </motion.div>
                   </div>
                 </div>
@@ -711,9 +600,9 @@ const Home = () => {
 
             {/* Our Project Section */}
 
-            
 
-<div className="max-w-8xl mx-auto mt-10 mb-30">
+
+            <div className="max-w-8xl mx-auto mt-10 mb-30">
               <div className="inline-block border-2 border-green-600 rounded-2xl px-4 py-2 w-fit mb-15">
                 <h2 className="text-5xl font-semibold py-2 text-black">
                   Our Projects
@@ -827,11 +716,10 @@ const Home = () => {
           bg-gradient-to-br from-green-500 to-green-600
           text-white rounded-full shadow-xl
           transition-all duration-300 transform
-          ${
-            isVisible
-              ? "opacity-100 scale-100 animate-soft-bounce water-ripple"
-              : "opacity-0 scale-50 pointer-events-none"
-          }
+          ${isVisible
+                  ? "opacity-100 scale-100 animate-soft-bounce water-ripple"
+                  : "opacity-0 scale-50 pointer-events-none"
+                }
           hover:from-green-600 hover:to-green-700
           hover:shadow-2xl
         `}
