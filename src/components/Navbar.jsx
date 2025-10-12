@@ -211,7 +211,7 @@ const Navbar = () => {
             </motion.ul>
 
             <motion.a 
-              href="tel:+2348059770443"
+              href="/contact"
               initial={{ opacity: 0, x: 10 }}
               animate={{ 
                 opacity: 1, 

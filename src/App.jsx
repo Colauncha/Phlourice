@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Project from './pages/Project'
 import About from './pages/About'
 import Services from './pages/Services'
+import Contact from './pages/Contact'
 import RootLayout from './layout/RootLayout'
 import NotFound from './components/NotFound'
 
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='project' element={<Project />} />
         <Route path='about' element={<About />} />
         <Route path='services' element={<Services />} />
+        <Route path='contact' element={<Contact />} />
 
 
         <Route path='*' element={<NotFound />} />

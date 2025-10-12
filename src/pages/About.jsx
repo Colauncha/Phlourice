@@ -61,131 +61,184 @@ const About = () => {
         transition={{ duration: 1 }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6"> 
-          {/* First Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-8 md:gap-12 py-8">
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 md:mb-12">
-                Get to know our company
-              </h2>
 
-              <div className="flex flex-col gap-6 space-y-4 text-gray-700">
-                <p className="text-lg sm:text-xl leading-relaxed">
-                  Phlouriche Nigeria Limited was founded in 2014 with the
-                  objective of providing Technical and Engineering services for
-                  the energy sector, we are recognized as a first class service
-                  provider.
-                </p>
+          <div className="flex justify-center items-center px-4 min-h-screen">
+  <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-8 md:gap-12 py-8">
+    <div className="space-y-6 text-center lg:text-left flex flex-col justify-center">
+      <h2 className="text-2xl md:text-4xl font-bold text-green-800">
+        Turning Complex Energy Challenges into Simple Solutions
+        <p className="text-green-900 font-normal text-base md:text-lg mt-1 mb-6 md:mb-12">
+        Leveraging expertise and innovation to keep your projects moving forward.
+      </p>
+      </h2>
+      
 
-                <p className="text-lg sm:text-xl leading-relaxed">
-                  We are fast expanding and boasts of our presence in the
-                  emerging markets and have successfully created a brand of our
-                  own by leveraging our comprehensive capabilities to meet our
-                  customer's demand and ensure successful completion of their
-                  projects.
-                </p>
+      <div className="flex flex-col gap-6 space-y-4 text-gray-700">
+        <p className="text-lg sm:text-xl leading-relaxed">
+          Phlouriche Nigeria Limited, founded in 2014, delivers reliable technical and engineering services in the energy sector.
+        </p>
 
-                <p className="text-lg sm:text-xl leading-relaxed">
-                  Be sure that we are{" "}
-                  <span className="font-semibold text-green-700">
-                    "committed"{" "}
-                  </span>
-                  to take on the challenge of different assignments, raising our
-                  performance bar to be counted as one of the most trusted
-                  service companies in the emerging market.
-                </p>
-              </div>
-            </div>
+        <p className="text-lg sm:text-xl leading-relaxed">
+          We blend expertise with innovation to help clients achieve successful project outcomes. With a growing presence in emerging markets, we've built a strong brand by meeting diverse customer needs.
+        </p>
 
-            <div className="flex items-center justify-center">
-              <img
-                src={aboutImg2}
-                alt="About Phlouriche Nigeria Limited"
-                className="w-full h-auto max-h-[600px] object-cover rounded-lg shadow-lg"
-              />
-            </div>
-          </div>
+        <p className="text-lg sm:text-xl leading-relaxed">
+          Our commitment is to tackle challenges, raise performance standards, and remain a trusted partner in today's evolving energy landscape.
+        </p>
+      </div>
+    </div>
 
-          {/* Second Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 py-8 mt-8 md:mt-12">
-            <div className="flex justify-center md:justify-start">
-              <img
-                src={aboutImg5}
-                alt="About Phlouriche Nigeria Limited"
-                className="w-full max-w-md h-auto object-cover rounded-lg shadow-lg"
-              />
-            </div>
+    <div className="flex items-center justify-center">
+      <img
+        src={aboutImg2}
+        alt="About Phlouriche Nigeria Limited"
+        className="w-full h-auto max-h-[600px] object-cover rounded-lg shadow-lg"
+      />
+    </div>
+  </div>
+</div>
+          
+         
 
-            <div className="flex flex-col justify-center space-y-6">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-700">
-                Our experience includes:
-              </h2>
+         
 
-              <ul className="text-gray-700 text-base sm:text-lg space-y-2 pl-5 list-disc">
-                <li>Engineering, procurement and construction.</li>
-                <li>
-                  Operations and maintenance of Natural gas pipeline and
-                  ancillary.
-                </li>
-                <li>Natural gas compression and distribution.</li>
-                <li>Procurement of pipes and Gas equipment.</li>
-                <li>Gas Trading and Marketing.</li>
-                <li>Oil field services.</li>
-                <li>Independent Power Plant.</li>
-              </ul>
-            </div>
-          </div>
+
+        
+         
+
         </div>
       </motion.main>
+       <section className="w-full bg-white py-12">
+  <motion.div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+      {/* Image Section */}
+      <div className="flex justify-center md:justify-start">
+        <img
+          src={aboutImg5}
+          alt="About Phlouriche Nigeria Limited"
+          className="w-full max-w-md h-auto object-cover rounded-lg shadow-lg"
+        />
+      </div>
+
+      {/* Text Section */}
+      <div className="flex flex-col justify-center space-y-6">
+        <div>
+          <h2 className="text-xs md:text-sm lg:text-base font-bold text-green-700">
+            Why PHLOURICHE?
+          </h2>
+          <p className="text-xl md:text-2xl lg:text-3xl font-bold text-black mt-2">
+            Proven Expertise Across the Energy Value Chain.
+          </p>
+        </div>
+
+        <p className="text-xs md:text-sm lg:text-base text-gray-700">
+          At Phlouriche, our strength lies in the breadth and depth of our experience.
+        </p>
+
+        <ul className="text-gray-700 text-base sm:text-lg space-y-2 pl-5 list-disc">
+          <li>Engineering, procurement and construction (EPC)</li>
+          <li>Operations and maintenance of Natural gas pipeline and ancillary.</li>
+          <li>Natural gas compression and distribution.</li>
+          <li>Procurement of Pipes and Gas equipment.</li>
+          <li>Gas Trading and Marketing.</li>
+          <li>Oilfield services.</li>
+          <li>Independent Power Plant Projects.</li>
+        </ul>
+      </div>
+    </div>
+  </motion.div>
+</section>
+
+
+      
 
       
 
       {/* Mission/Vision Banner */}
-      <div className="mt-12 md:mt-30 overflow-hidden"> 
-        <motion.div
-          className="relative flex items-center justify-center w-full h-[200px] sm:h-[300px]"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        >
-          <img
-            src={aboutImg4}
-            alt="Mission, Vision and Core Values"
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-black/30"></div>
-          <div className="absolute w-full px-4 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white drop-shadow-lg leading-tight">
-              Mission, Vision and Core Values
-            </h2>
-          </div>
-        </motion.div>
+<div className="mt-8 md:mt-16 overflow-hidden"> 
+  <motion.div
+    className="relative flex items-center justify-center w-full h-[200px] sm:h-[300px]"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 1 }}
+  >
+    <img
+      src={aboutImg4}
+      alt="Mission, Vision and Core Values"
+      className="w-full h-full object-cover"
+      loading="lazy"
+    />
+    <div className="absolute inset-0 bg-black/30"></div>
+    <div className="absolute w-full px-4 text-center">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white drop-shadow-lg leading-tight">
+        Mission, Vision and Core Values
+      </h2>
+    </div>
+  </motion.div>
+</div>
+
+{/* Mission/Vision Text */}
+<motion.div
+  className="pt-10 pb-8 px-4 sm:px-[6%]" // ⬅️ reduced top & bottom padding
+  initial={{ opacity: 0, y: 10 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1 }}
+>
+  <div className="flex items-center justify-center mt-10 px-6">
+    <div className="max-w-7xl w-full">
+      {/* Vision Header */}
+      <div className="text-center mb-8"> {/* ⬅️ reduced bottom margin */}
+        <h3 className="text-green-700 font-extrabold text-sm tracking-wide uppercase">
+          Phlouriche’s Vision
+        </h3>
+        <h1 className="text-xl md:text-2xl font-bold text-gray-900 mt-2">
+          Delivering Complete Energy Solutions With World-Class Standards.
+        </h1>
+        <p className="text-gray-600 text-base mt-2 mb-4">
+          We are committed to providing reliable, innovative, and safe services that reflect our core values and dedication to excellence.
+        </p>
       </div>
 
-      {/* Mission/Vision Text */}
-      <motion.div
-        className="pt-[50px] px-4 sm:px-[6%] mt-4" 
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-      >
-        <div className="flex flex-col items-center justify-center text-center text-lg sm:text-xl md:text-2xl gap-6 max-w-7xl mx-auto py-8">
-          <p>
-            Our mission is to provide complete energy solutions, in a manner
-            that is consistent with our core value and delivery of world class
-            services to our valued clients with best safety practices.
-          </p>
-          <p>
-            To be a World Class Company, through our strong belief in people and
-            a desire to make a real difference. Many companies employ people to
-            run a business, whereas We have made our mission to transform our
-            Company to recognize our people as driving force and the asset of
-            the Company.
-          </p>
+      {/* Two Vision Boxes */}
+      <div className="space-y-6"> {/* ⬅️ reduced gap between boxes */}
+        {/* Box 1 */}
+        <div className="flex items-start gap-4 mt-6">
+          <div className="bg-green-700 text-white font-semibold text-lg w-10 h-10 flex items-center justify-center">
+            01
+          </div>
+          <div className="flex-1">
+            <h2 className="text-green-700 font-semibold text-lg mb-1">
+              Provide Complete Energy Solutions
+            </h2>
+            <p className="text-gray-800 text-base leading-relaxed">
+              Our mission is to deliver comprehensive energy services with world-class quality, best safety practices, and unwavering commitment to our valued clients.
+            </p>
+          </div>
         </div>
-      </motion.div>
+
+        {/* Box 2 */}
+        <div className="flex items-start gap-4">
+          <div className="bg-white border border-gray-300 text-green-700 font-semibold text-lg w-10 h-10 flex items-center justify-center">
+            02
+          </div>
+          <div className="flex-1">
+            <h2 className="text-green-700 font-semibold text-lg mb-1">
+              To Be a World-Class Company
+            </h2>
+            <p className="text-gray-800 text-base leading-relaxed">
+              We believe in people as the driving force of our success. At Phlouriche, our vision is to create a company where talent, innovation, and dedication make a lasting difference in the energy sector.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</motion.div>
+
+      
+
 
       {/* Scroll to Top Button */}
       <button

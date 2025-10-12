@@ -4,6 +4,10 @@ import serviceImg from "../assets/project/services.jpeg";
 import service2img from "../assets/services image s/service 2.png";
 import service3img from '../assets/services image s/service 5.png';
 import service4img from '../assets/services image s/service 6.png';
+import scrrollImg from '../assets/services image s/scroll.png'
+import settingsImg from '../assets/services image s/settings.png'
+import pencilImg from '../assets/services image s/pencil.png'
+import recycleImg from '../assets/services image s/pencil.png'
 
 const Services = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -59,6 +63,37 @@ const fadeIn = {
     visible: { opacity: 1, transition: { duration: 1 } },
   };
 
+  const services = [
+    {
+      id: 1,
+      number: "1",
+      title: "Procurement of Equipment",
+      description: "Supplying pipes, CNG and LNG equipment, PRMS, regulators, meters, filters, and more reliable solutions for the oil and gas sector.",
+      icon: scrrollImg
+    },
+    {
+      id: 2,
+      number: "2",
+      title: "Construction & Facilities Development",
+      description: "Building pipelines and oil & gas facilities with precision, safety, and world-class standards.",
+      icon: settingsImg
+    },
+    {
+      id: 3,
+      number: "3",
+      title: "Engineering & Design",
+      description: "From concept design to FEED and detailed engineering, we provide innovative designs tailored to project needs.",
+      icon: pencilImg
+    },
+    {
+      id: 4,
+      number: "4",
+      title: "EPC Project Delivery",
+      description: "Single-source execution for engineering, procurement, and construction, ensuring seamless delivery.",
+      icon: recycleImg
+    }
+  ];
+
   return (
     <div className="bg-emerald-100 [&::selection]:bg-green-600 [&::selection]:text-white">
       <motion.div
@@ -94,119 +129,121 @@ const fadeIn = {
       <motion.main className="pt-[70px] px-[8%] [&::selection]:bg-green-600 [&::selection]:text-white bg-emerald-100  flex-1 scrollbar-green min-h-screen">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
-            {[1, 2, 3].map((item, idx) => (
-              <motion.div
-                key={item}
-                className="border-2 rounded-xl border-green-500 hover:shadow-lg transition-shadow duration-300"
-                variants={cardVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6, delay: idx * 0.2 }}
-              >
-               <img
-  src={
-    item === 1
-      ? service2img
-      : item === 2
-      ? service3img
-      : service4img
-  }
-  alt={
-    item === 1
-      ? "Engineering, Procurement and Construction"
-      : item === 2
-      ? "Gas Marketing"
-      : "Power and Energy Solutions"
-  }
-  className="w-full h-60 sm:h-80 md:h-96 lg:h-110 object-cover rounded-t-xl"
-/>
-
-                <div className="p-4 sm:p-6">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
-                    {item === 1
-                      ? "Engineering, Procurement and Construction"
-                      : item === 2
-                      ? "Gas Marketing"
-                      : "Power and Energy Solutions"}
-                  </h3>
-                  <p className="text-gray-700 text-base sm:text-lg mb-4">
-                    {item === 1
-                      ? "EPC is a project delivery method where a single entity handles all aspects of a project"
-                      : item === 2
-                      ? "Buying and selling of natural gas to consumers and businesses"
-                      : "Offer services and products to generate, distribute, and manage energy efficiently"}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-15">
-          <p className="text-gray-700 text-lg sm:text-xl lg:text-2xl text-center leading-relaxed sm:leading-loose space-y-6">
-            Our experience and management services cover every phase of
-            maintenance, engineering, procurement, construction and projects
-            management services for the upstream, midstream and downstream of
-            the oil, gas, energy industries.
-          </p>
-        </div>
-      </motion.main>
-
-      <motion.div 
+  {[1, 2, 3].map((item, idx) => (
+    <motion.div
+      key={item}
+      className="rounded-xl bg-green-200 shadow-md hover:shadow-lg transition-transform duration-300 hover:scale-[1.02] flex flex-col items-center text-center"
+      variants={cardVariants}
       initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={fadeIn}
-      transition={{ duration: 0.6 }}
-      className="w-full flex flex-col py-12 mt-30 bg-white px-4 sm:px-10 lg:px-20"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, delay: idx * 0.2 }}
     >
-      <div className="space-y-10 px-4 sm:px-10 lg:px-20">
-        <motion.h2 
-          variants={item}
-          className="text-2xl md:text-3xl font-bold text-green-600"
-        >
-          Phlouriche provides the following:
-        </motion.h2>
-        
-        <motion.div 
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="w-full"
-        >
-          <ul className="space-y-6 md:space-y-8 text-lg md:text-xl text-gray-800">
-            <motion.li 
-              variants={item}
-              className="flex items-start"
-            >
-              <span className="py-2 text-green-600">
-                Procurement of Pipes, CNG Equipment, LNG Equipment, PRMS, Regulators, Meters, Filters etc.
-              </span>
-            </motion.li>
-            
-            <motion.li 
-              variants={item}
-              className="flex items-start"
-            >
-              <span className="py-2 text-green-600">
-                At Phlouriche we are also involved in construction of pipes, oil and gas facilities.
-              </span>
-            </motion.li>
-            
-            <motion.li 
-              variants={item}
-              className="flex items-start"
-            >
-              <span className="py-2 text-green-600">
-                We also have the following as our services Concept Design, Front End Engineering Design and Detailed Engineering
-              </span>
-            </motion.li>
-          </ul>
-        </motion.div>
+      <img
+        src={
+          item === 1
+            ? service2img
+            : item === 2
+            ? service3img
+            : service4img
+        }
+        alt={
+          item === 1
+            ? "Engineering, Procurement and Construction"
+            : item === 2
+            ? "Gas Marketing"
+            : "Power and Energy Solutions"
+        }
+        className="w-[90%] h-60 sm:h-72 md:h-80 object-cover rounded-xl mt-4"
+      />
+
+      <div className="p-4 sm:p-6 flex flex-col items-center text-center">
+        <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
+          {item === 1
+            ? "Engineering, Procurement and Construction"
+            : item === 2
+            ? "Gas Marketing"
+            : "Power and Energy Solutions"}
+        </h3>
+        <p className="text-gray-700 text-base sm:text-lg">
+          {item === 1
+            ? "EPC is a project delivery method where a single entity handles all aspects of a project"
+            : item === 2
+            ? "Buying and selling of natural gas to consumers and businesses"
+            : "Offer services and products to generate, distribute, and manage energy efficiently"}
+        </p>
       </div>
     </motion.div>
+  ))}
+</div>
+
+        </div>
+
+        
+      </motion.main>
+
+
+
+
+
+
+
+
+  {/* Services Section */}
+    <section className="py-16"> {/* Light green background */}
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Section Header */}
+    <div className="text-center mb-12">
+      <h2 className="text-lg font-bold text-green-800 mb-2">
+        Ways We Power Your Success:
+      </h2>
+    </div>
+
+    
+
+
+    {/* Services Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-center text-center">
+      {services.map((service) => (
+        <div
+  key={service.id}
+  className="space-y-4 p-6 bg-green-100 border border-green-300 rounded-lg shadow hover:shadow-lg transition-shadow duration-300"
+>
+
+          {/* Icon Circle */}
+<div className="w-12 h-12 mx-auto flex items-center justify-center rounded-full">
+  <img
+    src={service.icon}
+    alt={service.title}
+    className="w-11 h-11 object-contain"
+  />
+</div>
+
+
+          {/* Title */}
+          <h3 className="text-lg font-semibold text-gray-700">
+            {service.title}
+          </h3>
+
+          {/* Description */}
+          <p className="text-base text-gray-700 leading-relaxed">
+            {service.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+ 
+
+
+
+
+
+
+
+      
 
       {/* Optimized Back-to-Top Button */}
       <button

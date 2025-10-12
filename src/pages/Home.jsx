@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
-import heroimg from "../assets/home images/home 1.png";
+import heroimgone from "../assets/home images/1 hhome.png";
+import hero2mgone from "../assets/home images/2 hhome.png";
+import hero3mgone from "../assets/home images/3 hhome.png";
+import hero4mgone from "../assets/home images/4 hhome.jpeg";
 import hero2img from "../assets/home images/home 2.png";
 import hero3img from "../assets/home images/home 3.png";
 import hero4img from "../assets/home images/home 4.png";
@@ -25,13 +28,46 @@ import valton from "../assets/home images/valton.png";
 import industrial from "../assets/home images/industrial.webp";
 import Marquee from "react-fast-marquee";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+
+
+import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/effect-fade";
+
+
+
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
+
+  const heroSlides = [
+    { 
+      img: heroimgone, 
+      title: "Transforming Energy Solutions",
+      subtitle: "Into Reality",
+      description: "From pipelines to power plants, we create sustainable energy solutions that work for today and the future."
+    },
+    { 
+      img: hero2mgone, 
+      title: "Transforming Energy Solutions",
+      subtitle: "Into Reality", 
+      description: "From pipelines to power plants, we create sustainable energy solutions that work for today and the future."
+    },
+    { 
+      img: hero3mgone, 
+      title: "Transforming Energy Solutions",
+      subtitle: "Into Reality", 
+      description: "From pipelines to power plants, we create sustainable energy solutions that work for today and the future."
+    },
+    { 
+      img: hero4mgone, 
+      title: "Transforming Energy Solutions",
+      subtitle: "Into Reality",
+      description: "From pipelines to power plants, we create sustainable energy solutions that work for today and the future."
+    }
+  ];
 
   const projects = [
     { img: cng, title: "CNG Solutions" },
@@ -68,6 +104,101 @@ const Home = () => {
 
   return (
     <>
+    <section className="relative min-h-screen">
+      
+        {/* <Swiper
+          modules={[Autoplay, EffectFade]}
+          effect="fade"
+          speed={1500}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          className="absolute inset-0 w-full h-full"
+        >
+          {heroSlides.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <div 
+                className="w-full h-screen bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${slide.img})` }}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper> */}
+
+        <section className="relative w-full h-screen m-0 p-0 overflow-hidden">
+  {/* Swiper Background */}
+  <Swiper
+    modules={[Autoplay, EffectFade]}
+    effect="fade"
+    speed={1500}
+    autoplay={{
+      delay: 5000,
+      disableOnInteraction: false,
+    }}
+    loop={true}
+    className="absolute inset-0 w-full h-full"
+  >
+    {heroSlides.map((slide, index) => (
+      <SwiperSlide key={index}>
+        <div
+          className="w-full h-full bg-center bg-cover"
+          style={{
+            backgroundImage: `url(${slide.img})`,
+          }}
+        />
+      </SwiperSlide>
+    ))}
+  </Swiper>
+
+  {/* Content Overlay */}
+  <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4 bg-black/40">
+    <motion.h1
+      className="text-white text-4xl sm:text-3xl md:text-5xl font-bold leading-tight mt-22 mb-4"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.3 }}
+    >
+      Transforming 
+      <span className="text-green-400"> Energy Solutions</span>
+    </motion.h1>
+
+    <motion.h2
+      className="text-white text-3xl sm:text-4xl md:text-5xl font-semibold mb-6"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.6 }}
+    >
+      Into Reality
+    </motion.h2>
+
+    <motion.p
+  className="text-white text-base sm:text-lg md:text-xl max-w-3xl mb-8 leading-relaxed"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1, delay: 0.9 }}
+>
+  From pipelines to power plants, we create sustainable energy solutions that work for today and the future.
+</motion.p>
+
+
+  
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={() => navigate("/about")}
+      className="bg-green-600 hover:bg-green-700 text-white py-3 px-3 rounded-lg text-lg sm:text-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 1.2 }}
+    >
+      Discover More
+    </motion.button>
+  </div>
+</section>
+      </section>
+
       <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -77,182 +208,7 @@ const Home = () => {
       >
         <main className="pt-[70px] px-[4%] [&::selection]:bg-green-600 [&::selection]:text-white mt-5 bg-gradient-to-br from-green-50 to-emerald-100 flex-1 scrollbar-green min-h-screen">
           <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 py-6 px-4 sm:px-6 lg:px-8">
-            {/* <div className="max-w-8xl mx-auto mb-30 px-4 sm:px-8 lg:px-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
-        
-      
-        <motion.div
-          className="flex flex-col justify-center"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <motion.h1
-            className="text-4xl md:text-5xl font-bold text-gray-900 py-5 leading-tight"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-          >
-            <span className="text-green-600">Transforming</span> Energy{" "}
-            <span className="text-green-600">Solutions</span> Into Reality
-          </motion.h1>
-
-          <motion.p
-            className="text-lg text-gray-700 leading-relaxed"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
-          >
-<span className="text-green-600">Phlouriche</span> Nigeria Limited stands at core of engineering, procurement and construction excellence.
-            </motion.p>
-          <motion.p
-            className="text-lg text-gray-700 leading-relaxed mt-4 mb-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
-          >
-            <span className="text-green-600">Specializing</span> in the design, operation, and maintenance of Natural Gas facilities, including Pipeline, CNG, LNG, gas processing plants, compression stations, above ground installation, pipeline construction, transmission and distribution network as well as CNG and LNG plants/stations as well as Independent Power Plants.
-          </motion.p>
-
-          <motion.p
-            className="text-lg text-gray-700 leading-relaxed"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
-          >
-<span className="text-green-600">We</span> deliver tailored technical solutions that enhance efficiency and sustainability.
-            </motion.p>
-
-          
-          <motion.div
-            className="flex flex-col md:flex-row justify-between items-start md:items-start mt-8 gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-          >
-       
             
-
-             <motion.button
-             whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-                    onClick={() => {
-                      navigate("/about");
-                    }}
-                    className="bg-green-600 hover:bg-green-700 text-white py-4 px-6 rounded-2xl text-3xl font-semibold transition duration-300 ease-in-out transform w-fit mt-10"
-            >
-                    About Phlouriche
-                  </motion.button>
-
-         
-          </motion.div>
-        </motion.div>
-
-      
-        <motion.div
-          className="col-span-1 relative"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-        >
-          <img
-            src={heroimg}
-            alt="Background"
-            className="w-full h-auto object-cover rounded-xl"
-          />
-        </motion.div>
-      </div>
-    </div> */}
-
-            <div className="max-w-8xl mx-auto mb-30 px-4 sm:px-8 lg:px-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
-                <motion.div
-                  className="col-span-1 relative md:order-2"
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-                >
-                  <img
-                    src={heroimg}
-                    alt="Phlouriche Energy Solutions"
-                    className="w-full h-auto object-cover "
-                    loading="eager"
-                  />
-                </motion.div>
-
-                <motion.div
-                  className="flex flex-col justify-center md:order-1"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                >
-                  <motion.h1
-                    className="text-4xl md:text-5xl font-bold text-gray-900 py-5 leading-tight"
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                  >
-                    <span className="text-green-600">Transforming</span> Energy{" "}
-                    <span className="text-green-600">Solutions</span> Into
-                    Reality
-                  </motion.h1>
-
-                  <motion.p
-                    className="text-lg text-gray-700 leading-relaxed"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
-                  >
-                    <span className="text-green-600">Phlouriche</span> Nigeria
-                    Limited stands at the core of engineering, procurement and
-                    construction excellence.
-                  </motion.p>
-
-                  <motion.p
-                    className="text-lg text-gray-700 leading-relaxed mt-4 mb-4"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }}
-                  >
-                    <span className="text-green-600">Specializing</span> in the
-                    design, operation, and maintenance of Natural Gas
-                    facilities, including Pipeline, CNG, LNG, gas processing
-                    plants, compression stations, above ground installation,
-                    pipeline construction, transmission and distribution network
-                    as well as CNG and LNG plants/stations as well as
-                    Independent Power Plants.
-                  </motion.p>
-
-                  <motion.p
-                    className="text-lg text-gray-700 leading-relaxed"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1.2, ease: "easeOut", delay: 0.5 }}
-                  >
-                    <span className="text-green-600">We</span> deliver tailored
-                    technical solutions that enhance efficiency and
-                    sustainability.
-                  </motion.p>
-
-                  <motion.div
-                    className="flex flex-col md:flex-row justify-between items-start md:items-start mt-8 gap-4"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-                  >
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      onClick={() => navigate("/about")}
-                      className="bg-green-600 hover:bg-green-700 text-white py-4 px-6 rounded-2xl text-xl md:text-2xl font-semibold transition duration-300 ease-in-out transform w-fit mt-4 md:mt-10"
-                    >
-                      About Phlouriche
-                    </motion.button>
-                  </motion.div>
-                </motion.div>
-              </div>
-            </div>
-
             {/* Marquee Section */}
             <div className="mb-30 overflow-hidden w-full">
               <Marquee autoFill pauseOnHover speed={30} className="w-full">
@@ -378,7 +334,7 @@ const Home = () => {
                     />
                     <div className="absolute inset-0 p-6.5 bg-black/30 rounded-2xl flex flex-col justify-between">
                       <h3 className="w-fit text-white font-bold text-xl md:text-lg border-2 border-white rounded-2xl px-4 py-2">
-                        Facility Development
+                        EPCM
                       </h3>
 
                       <div className="text-white/90 text-[16px] rounded-2xl p-6.5 bg-white/30">
@@ -408,7 +364,7 @@ const Home = () => {
                       className="w-full h-full object-cover rounded-2xl"
                     />
                    <div className="absolute inset-0 p-4 sm:p-6 bg-black/30 rounded-2xl flex flex-col justify-between gap-4 overflow-hidden">
-  <h3 className="w-fit text-white font-bold text-base sm:text-lg border-2 border-white rounded-2xl px-3 py-1 sm:px-4 sm:py-2">
+  <h3 className="w-[60%] text-white font-bold text-base sm:text-lg border-2 border-white rounded-2xl px-3 py-1 sm:px-4 sm:py-2">
     Power Plant Development
   </h3>
 
@@ -463,7 +419,7 @@ const Home = () => {
 
             {/* Request Consultation Section */}
 
-            <div className="max-w-8xl mx-auto mt-5 mb-30 px-4">
+            {/* <div className="max-w-8xl mx-auto mt-5 mb-30 px-4">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2.5fr_0.8fr_0.8fr] gap-x-6 gap-y-10 items-stretch">
                 <motion.div
                   className="bg-gray-100 py-8 px-6.5 rounded-lg h-full"
@@ -531,7 +487,65 @@ const Home = () => {
                   </p>
                 </motion.div>
               </div>
-            </div>
+            </div> */}
+
+            <div className="max-w-8xl mx-auto mt-5 mb-30 px-4">
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+    {/* Item 1 */}
+   
+   
+    <motion.div
+      className="rounded-lg p-6 flex flex-col items-center text-center bg-gray-100 hover:bg-white transition"
+      initial={{ opacity: 0, x: 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+    >
+      <div className="overflow-hidden rounded-lg mb-4 w-full">
+        <img
+          src={hero5img}
+          alt="Energy project transformation"
+          className="w-full h-auto object-cover transform transition-transform duration-500 hover:scale-105"
+        />
+      </div>
+      <h4 className="text-3xl font-bold text-gray-800 mb-2">
+          Elevate Your Projects With Our Expertise 
+      </h4>
+      <p className="text-xl text-gray-600 leading-relaxed">
+       Our extensive experience in pipeline construction ensures that every project is executed with precision, delivering high-quality solutions tailored to your needs.
+      </p>
+    </motion.div>
+
+    {/* item 2 */}
+    <motion.div
+      className="rounded-lg p-6 flex flex-col items-center text-center bg-gray-100 hover:bg-white transition"
+      initial={{ opacity: 0, x: 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+    >
+      <div className="overflow-hidden rounded-sm mb-4 w-full">
+        <img
+          src={hero6img}
+          alt="Energy project transformation"
+          className="w-full h-auto object-cover transform transition-transform duration-500 hover:scale-105"
+        />
+      </div>
+      <h4 className="text-3xl font-bold text-gray-800 mb-2">
+         Transform Your Energy Projects 
+      </h4>
+      <p className="text-xl text-gray-600 leading-relaxed">
+       We provide customized solutions for energy initiatives, ensuring quality equipment and expert maintenance to enhance your operational success.
+      </p>
+    </motion.div>
+
+    
+
+    
+  </div>
+</div>
+
+
 
             {/* End of Request Consultation Section */}
 
@@ -638,7 +652,7 @@ const Home = () => {
                     </motion.div>
 
                     <motion.p
-                      className="text-base sm:text-lg text-gray-600 leading-relaxed mb-4"
+                      className="text-center sm:text-xl text-gray-600 leading-relaxed mb-4"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
@@ -648,9 +662,7 @@ const Home = () => {
                         delay: 0.6,
                       }}
                     >
-                      Phlouriche Nigeria Limited offers a wealth of expertise in
-                      the design, operation, and maintenance of Natural Gas
-                      facilities and Power Plants. Our commitment to delivering
+                      Our commitment to delivering
                       high-quality equipment and tailored solutions ensures that
                       your projects achieve optimal performance and reliability.
                     </motion.p>
@@ -666,7 +678,7 @@ const Home = () => {
                         delay: 0.8,
                       }}
                     >
-                      <motion.button
+                      {/* <motion.button
                        whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                       onClick={() => navigate("/services")}
@@ -688,7 +700,7 @@ const Home = () => {
               "
                       >
                         Explore →
-                      </motion.button>
+                      </motion.button> */}
                     </motion.div>
                   </div>
                 </div>
@@ -699,7 +711,9 @@ const Home = () => {
 
             {/* Our Project Section */}
 
-            <div className="max-w-8xl mx-auto mt-10 mb-30">
+            
+
+<div className="max-w-8xl mx-auto mt-10 mb-30">
               <div className="inline-block border-2 border-green-600 rounded-2xl px-4 py-2 w-fit mb-15">
                 <h2 className="text-5xl font-semibold py-2 text-black">
                   Our Projects

@@ -306,7 +306,7 @@ const Project = () => {
       <main className="pt-[70px] px-[4%] [&::selection]:bg-green-600 [&::selection]:text-white bg-emerald-100 flex-1 scrollbar-green min-h-screen">
               
            
-<section className="py-16 px-6 sm:px-10 lg:px-20 bg-white">
+{/* <section className="py-16 px-6 sm:px-10 lg:px-20">
   <div className="max-w-6xl mx-auto">
     
     <h2 className="text-3xl sm:text-4xl font-bold text-green-700 mb-6 text-center">
@@ -362,6 +362,118 @@ const Project = () => {
       </div>
     </div>
   </div>
+</section> */}
+
+
+{/* <section className="py-16 px-6 sm:px-10 lg:px-20">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-3xl sm:text-4xl font-bold text-green-700 mb-6 text-center">
+      Gas Equipment procurement, installation and commissioning
+    </h2>
+
+    <p className="text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
+      We procure, install and commission various equipment required to drive the gas value chain.
+    </p>
+
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+      
+      <div className="flex flex-col items-center text-center border border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition">
+        <img src={gasFlow} alt="Gas Flow Meter" className="h-32 object-contain mb-4" />
+        <span className="text-green-600 font-medium">Gas Flow Meter</span>
+      </div>
+
+      <div className="flex flex-col items-center text-center border border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition">
+        <img src={gasRegulator} alt="Gas Regulator" className="h-32 object-contain mb-4" />
+        <span className="text-green-600 font-medium">Gas Regulator</span>
+      </div>
+
+      <div className="flex flex-col items-center text-center border border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition">
+        <img src={reliefValves} alt="Relief Valves" className="h-32 object-contain mb-4" />
+        <span className="text-green-600 font-medium">Relief Valves</span>
+      </div>
+
+      <div className="flex flex-col items-center text-center border border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition">
+        <img src={PRMS} alt="PRMS" className="h-32 object-contain mb-4" />
+        <span className="text-green-600 font-medium">PRMS</span>
+      </div>
+
+      <div className="flex flex-col items-center text-center border border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition">
+        <img src={gasFilter} alt="Gas Filter" className="h-32 object-contain mb-4" />
+        <span className="text-green-600 font-medium">Gas Filter</span>
+      </div>
+
+      <div className="flex flex-col items-center text-center border border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition">
+        <img src={gasShrubber} alt="Gas Scrubber" className="h-32 object-contain mb-4" />
+        <span className="text-green-600 font-medium">Gas Scrubber</span>
+      </div>
+
+      <div className="flex flex-col items-center text-center border border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition">
+        <img src={valves} alt="Valves" className="h-32 object-contain mb-4" />
+        <span className="text-green-600 font-medium">Valves</span>
+      </div>
+
+      <div className="flex flex-col items-center text-center border border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition">
+        <img src={csPipes} alt="CS Pipes" className="h-32 object-contain mb-4" />
+        <span className="text-green-600 font-medium">CS Pipes</span>
+      </div>
+    </div>
+  </div>
+</section> */}
+
+
+<section className="py-16 px-6 sm:px-10 lg:px-20">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-3xl sm:text-4xl font-bold text-green-700 mb-6 text-center">
+      Gas Equipment procurement, installation and commissioning
+    </h2>
+
+    <p className="text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
+      We procure, install and commission various equipment required to drive the gas value chain.
+    </p>
+
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+      {/* Item */}
+      <div className="flex flex-col items-center text-center border border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-300 hover:bg-green-50 hover:border-green-200 cursor-pointer group">
+        <img src={gasFlow} alt="Gas Flow Meter" className="h-32 object-contain mb-4 group-hover:scale-105 transition-transform duration-300" />
+        <span className="text-green-600 font-medium group-hover:text-green-700">Gas Flow Meter</span>
+      </div>
+
+      <div className="flex flex-col items-center text-center border border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-300 hover:bg-green-50 hover:border-green-200 cursor-pointer group">
+        <img src={gasRegulator} alt="Gas Regulator" className="h-32 object-contain mb-4 group-hover:scale-105 transition-transform duration-300" />
+        <span className="text-green-600 font-medium group-hover:text-green-700">Gas Regulator</span>
+      </div>
+
+      <div className="flex flex-col items-center text-center border border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-300 hover:bg-green-50 hover:border-green-200 cursor-pointer group">
+        <img src={reliefValves} alt="Relief Valves" className="h-32 object-contain mb-4 group-hover:scale-105 transition-transform duration-300" />
+        <span className="text-green-600 font-medium group-hover:text-green-700">Relief Valves</span>
+      </div>
+
+      <div className="flex flex-col items-center text-center border border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-300 hover:bg-green-50 hover:border-green-200 cursor-pointer group">
+        <img src={PRMS} alt="PRMS" className="h-32 object-contain mb-4 group-hover:scale-105 transition-transform duration-300" />
+        <span className="text-green-600 font-medium group-hover:text-green-700">PRMS</span>
+      </div>
+
+      <div className="flex flex-col items-center text-center border border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-300 hover:bg-green-50 hover:border-green-200 cursor-pointer group">
+        <img src={gasFilter} alt="Gas Filter" className="h-32 object-contain mb-4 group-hover:scale-105 transition-transform duration-300" />
+        <span className="text-green-600 font-medium group-hover:text-green-700">Gas Filter</span>
+      </div>
+
+      <div className="flex flex-col items-center text-center border border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-300 hover:bg-green-50 hover:border-green-200 cursor-pointer group">
+        <img src={gasShrubber} alt="Gas Scrubber" className="h-32 object-contain mb-4 group-hover:scale-105 transition-transform duration-300" />
+        <span className="text-green-600 font-medium group-hover:text-green-700">Gas Scrubber</span>
+      </div>
+
+      <div className="flex flex-col items-center text-center border border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-300 hover:bg-green-50 hover:border-green-200 cursor-pointer group">
+        <img src={valves} alt="Valves" className="h-32 object-contain mb-4 group-hover:scale-105 transition-transform duration-300" />
+        <span className="text-green-600 font-medium group-hover:text-green-700">Valves</span>
+      </div>
+
+      <div className="flex flex-col items-center text-center border border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-300 hover:bg-green-50 hover:border-green-200 cursor-pointer group">
+        <img src={csPipes} alt="CS Pipes" className="h-32 object-contain mb-4 group-hover:scale-105 transition-transform duration-300" />
+        <span className="text-green-600 font-medium group-hover:text-green-700">CS Pipes</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 
@@ -382,7 +494,7 @@ const Project = () => {
               
                    
                     <motion.p 
-                      className="text-3xl sm:text-4xl text-green-600 leading-tight mt-[-40px] sm:mt-[-50px] px-2 sm:px-4"
+                      className="text-2xl sm:text-3xl text-green-600 leading-tight mt-[-40px] sm:mt-[-50px] px-2 sm:px-4"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
