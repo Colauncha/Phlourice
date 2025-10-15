@@ -7,7 +7,7 @@ import service4img from '../assets/services image s/service 6.png';
 import scrrollImg from '../assets/services image s/scroll.png'
 import settingsImg from '../assets/services image s/settings.png'
 import pencilImg from '../assets/services image s/pencil.png'
-import recycleImg from '../assets/services image s/pencil.png'
+import recycleImg from '../assets/services image s/recycle.png'
 
 const Services = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -69,14 +69,14 @@ const fadeIn = {
       number: "1",
       title: "Procurement of Equipment",
       description: "Supplying pipes, CNG and LNG equipment, PRMS, regulators, meters, filters, and more reliable solutions for the oil and gas sector.",
-      icon: scrrollImg
+      icon: settingsImg
     },
     {
       id: 2,
       number: "2",
       title: "Construction & Facilities Development",
       description: "Building pipelines and oil & gas facilities with precision, safety, and world-class standards.",
-      icon: settingsImg
+      icon: scrrollImg
     },
     {
       id: 3,
